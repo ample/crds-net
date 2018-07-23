@@ -38,6 +38,9 @@ collections:
   locations:
     output: true
     permalink: /locations/:slug
+  trips:
+    output: true
+    permalink: /trips/:slug  
 
 contentful:
   content_types:

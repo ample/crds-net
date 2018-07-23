@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+{% include _jumbocard-trips.html size="xl" %}
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 push-ends">
+        <div class="soft-bottom">
+          <ul class="nav nav-tabs font-size-small" role="tablist">
+            <li role="navigation" style="float: none; display: inline-block;" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+            <!--<li role="navigation" style="float: none; display: inline-block;"><a href="#itinerary" aria-controls="intinerary" role="tab" data-toggle="tab">Itinerary</a></li>-->
+            <li role="navigation" style="float: none; display: inline-block;"><a href="#lodging" aria-controls="lodging" role="tab" data-toggle="tab">Lodging</a></li>
+            <li role="navigation" style="float: none; display: inline-block;"><a href="#partner" aria-controls="partner" role="tab" data-toggle="tab">Partner</a></li>
+          </ul>
+          <div class="tab-content push-top">
+
+            <div role="tabpanel" class="tab-pane in active" id="overview">
+              <div class="row">
+                <div class="col-sm-12 push-ends">
+                  <p class="lead">{{ page.overview }}</p>
+                  <a href="" class="btn btn-primary btn-lg">Sign up</a>
+                </div>
+              </div>
+              <div class="row">
+                <hr />
+                <div class="col-sm-6 push-ends">
+                  <p class="metadata">Trip Details</p>
+                  <p class="font-size-base">
+                    <strong>Sign Up Deadline</strong>: {{ page.deadline }}
+                    <br /><strong>When</strong>:{{ page.start_date }} - {{ page.end_date }}
+                    <br /><strong>Deposit</strong>: {{ page.deposit }}
+                    <br /><strong>Size of Trip</strong>: {{ page.trip_size }}
+                    <br /><strong>Minimum Age</strong>: {{ page.minimum_age }}
+                    <br /><strong>Restrictions</strong>: {{ page.restrictions }}
+                    <br /><strong>Total Cost</strong>: {{ page.cost }}
+                  </p>
+                  <a href="" class="btn btn-primary">Sign up</a>
+                </div>
+                <div class="col-sm-6 soft-top" style="min-height:365px;">
+                  <iframe width="600" height="450" frameborder="0" style="border:0" src="{{ page.map_url }}" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="row">
+                <hr />
+                <div class="col-sm-12 push-top">
+                  <p class="metadata">Frequently Asked Questions</p>
+                </div>
+                <div class="col-sm-6 push-bottom">
+                  <h4 class="font-family-condensed-extra text-uppercase font-size-h4 push-bottom" style="line-height:.9em;">How much does it cost?</h4>
+                  <p class="font-size-small font-family-base"><strong>$3,400.</strong><br />That may sound like a lot, but you should know this covers everything (flight, hotel, meals, activities, etc.), and this is a number you’re meant to tackle with your friends and family.<br /><br /><strong>Of all of our trip participants, only 5% have had to contribute to their own trip.</strong></p>
+                </div>
+                <div class="col-sm-6 push-bottom">
+                  <h4 class="font-family-condensed-extra text-uppercase font-size-h4 push-bottom" style="line-height:.9em;">What is the travel like?</h4>
+                  <p class="font-size-small font-family-base">It takes over 24 hours to get there and we fly on a commercial airline. Listen to all of your favorite Spotify playlists twice, catch up on sleep, talk to your traveling companions, sleep some more, read, watch movies on your 21st century in-seat entertainment system, or just do nothing…which you probably haven’t done in a long time.</p>
+                </div>
+                <div class="col-sm-12">
+                  <a href="https://www.crossroads.net/reachout/go/faqs/" class="btn btn-gray">View all FAQs</a>&nbsp;&nbsp;&nbsp;<a class="link" href="mailto:gotrips@crossroads.net">Ask us a question</a>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="lodging">
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>lodging testing</p>
+                </div>
+              </div>
+            </div>
+
+            <div role="tabpanel" class="tab-pane" id="partner">
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>partner testing</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKQyvYdvoci3SqWgEg61G_2raG_xipO5Q&callback=initMap"
+    async defer></script>
+
+<script type="text/javascript">// <![CDATA[
+  var map;
+  var latitude = Number('{{ page.lat }}');
+  var longitude = Number('{{ page.long }}');
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('trips-map'), {
+      center: {lat: latitude, lng: longitude},
+      zoom: 7
+    });
+  }
+// ]]></script>

@@ -1,0 +1,13 @@
+{% if include.size == "xl" %}
+  <div class="jumbocard jumbocard-xl" style="background-image: url('{{ page.image | imgix: site.imgix }}?{{ site.imgix_params.placeholder }}');" data-optimize-bg-img>
+{% else %}
+  <div class="jumbocard" style="background-image: url('{{ page.image | imgix: site.imgix }}?{{ site.imgix_params.placeholder }}');" data-optimize-bg-img>
+{% endif %}
+  <div class="jumbocard-content text-left">
+    <div class="container">
+      <h2 class="jumbocard-title font-family-condensed-extra text-uppercase text-white flush"><strong>{{ page.location }}</strong></h2>
+      <h2 class="jumbocard-title font-family-condensed-extra text-uppercase text-white flush">{{ page.trip_name }}</h2>
+      <h5 class="font-size-base text-white">{{ page.start_date }} - {{ page.end_date }}</h5>
+    </div>
+  </div>
+</div>
