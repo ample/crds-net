@@ -40,7 +40,6 @@ collections:
     permalink: /:collection/:slug
   trips:
     output: true
-    permalink: /trips/:slug  
     permalink: /:collection/:slug
   series:
     output: false
