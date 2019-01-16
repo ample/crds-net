@@ -1,4 +1,4 @@
-import { ContentfulApi } from '../../Contentful/ContentfulApi';
+import { ContentfulAPI } from '../../Contentful/ContentfulAPI';
 import { ContentfulElementValidator as Element } from '../../Contentful/ContentfulElementValidator';
 
 function numberOfCardsShouldBeDisplayed(displayedCards, count){
@@ -20,7 +20,7 @@ function selectFilter(audience){
 describe('Testing the Happenings section on the Homepage without filtering:', function() {
   let promoList;
   before(function() {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     promoList = content.retrievePromoList();
 
     cy.visit('/');
@@ -60,7 +60,7 @@ describe('Testing the Happenings section on the Homepage without filtering:', fu
 describe('Testing the filtering functionality for the Homepage Happenings section:', function() {
   let promoList;
   before(function() {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     promoList = content.retrievePromoList();
 
     cy.visit('/');

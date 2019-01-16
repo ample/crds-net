@@ -1,10 +1,10 @@
-import { ContentfulApi } from '../../Contentful/ContentfulApi';
+import { ContentfulAPI } from '../../Contentful/ContentfulAPI';
 import { ContentfulElementValidator as Element } from '../../Contentful/ContentfulElementValidator';
 
 describe('Testing the Current Series on the Live page:', function () {
   let currentSeries;
   before(function () {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     const seriesManager = content.retrieveSeriesManager();
 
     cy.wrap({seriesManager}).its('seriesManager.currentSeries').should('not.be.undefined').then(() => {

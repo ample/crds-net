@@ -1,4 +1,4 @@
-import { ContentfulApi } from '../../Contentful/ContentfulApi';
+import { ContentfulAPI } from '../../Contentful/ContentfulAPI';
 
 function searchForLocation(keyword){
   cy.server();
@@ -15,7 +15,7 @@ function searchForLocation(keyword){
 describe('Testing the Locations page without searching:', function() {
   let locations;
   before(function() {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     locations = content.retrieveLocationList();
 
     cy.wrap({locations}).its('locations.locationCount').should('not.be.undefined').then(() => {
@@ -51,7 +51,7 @@ describe('Testing the Locations page without searching:', function() {
 describe('Testing the search functionality on the Locations page:', function() {
   let locations;
   before(function() {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     locations = content.retrieveLocationList();
 
     cy.wrap({locations}).its('locations.locationCount').should('not.be.undefined').then(() => {

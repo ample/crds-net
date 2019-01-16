@@ -22,12 +22,12 @@ meta_description: Crossroads Live
         <div class="countdown-component">
           <span data-stream-live="show" class="hide">
             <span class="countdown-header push-right">Live stream in progress...</span>
-            <a class="btn countdown-btn" href="/live/stream">Watch Now</a>
+            <a class="btn countdown-btn" href="/live/stream" data-automation-id="watch-stream">Watch Now</a>
           </span>
           <span data-stream-live="hide">
             <span class="countdown-header">Join the live stream in...</span>
           </span>
-          <ul class="countdown-timer list-inline" data-stream-live="hide">
+          <ul class="countdown-timer list-inline" data-stream-live="hide" data-automation-id="banner-stream-countdown">
             <li class="countdown-days days">03</li>
             <li class="countdown-hours hours">00</li>
             <li class="countdown-minutes minutes">42</li>
@@ -58,7 +58,7 @@ meta_description: Crossroads Live
           <div class="content-upcoming hide" data-stream-upcoming="show">
             <h1 class="title">Break through to the best life.</h1>
             <p>The next live-streamed service is about to start. Grab a coffee, gather your friends and hold tight.</p>
-            <div class="push-ends text-center crds-countdown countdown countdown-border countdown-white">
+            <div class="push-ends text-center crds-countdown countdown countdown-border countdown-white" data-automation-id="jumbotron-stream-countdown">
               <ul class="countdown-timer list-inline" data-stream-live="hide">
                 <li class="countdown-days days">03</li>
                 <li class="countdown-hours hours">00</li>

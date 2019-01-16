@@ -1,9 +1,9 @@
-import { ContentfulApi } from '../../Contentful/ContentfulApi';
+import { ContentfulAPI } from '../../Contentful/ContentfulAPI';
 
 describe('Testing the Current Series in the Shared Header/Media dropdown:', function () {
   let currentSeries;
   before(function () {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     const seriesManager = content.retrieveSeriesManager();
 
     cy.wrap({ seriesManager }).its('seriesManager.currentSeries').should('not.be.undefined').then(() => {

@@ -7,11 +7,13 @@ import { PromoList } from './Models/PromoModel';
 * Note: Due to Cypress's async nature, methods requesting data from Contentful may return before the properties within the cy.request blocks have been assigned.
 * Therefore, it is recommended that these methods are called in a before/beforeEach clause to allow more time for data retrieval.
 */
-export class ContentfulApi {
+export class ContentfulAPI {
   retrieveLocationList() {
     const locationList = new LocationList();
     cy.request('GET', `https://cdn.contentful.com/spaces/${Cypress.env('CONTENTFUL_SPACE_ID')}/environments/${Cypress.env('CONTENTFUL_ENV')}/entries?access_token=${Cypress.env('CONTENTFUL_ACCESS_TOKEN')}&content_type=location&select=fields.name,fields.slug,fields.image&include=3`)
       .then((response) => {
+        cy.log(response);
+        cy.log(response.body);
         const jsonResponse = JSON.parse(response.body);
         locationList.storeListOfLocations(jsonResponse);
       });

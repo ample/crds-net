@@ -1,10 +1,10 @@
-import { ContentfulApi } from '../../Contentful/ContentfulApi';
+import { ContentfulAPI } from '../../Contentful/ContentfulAPI';
 
 describe('Testing the Current Series on a random Locations page:', function () {
   let currentSeries;
   let locations;
   before(function () {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     const seriesManager = content.retrieveSeriesManager();
     locations = content.retrieveLocationList();
 

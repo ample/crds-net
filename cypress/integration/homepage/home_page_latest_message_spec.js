@@ -1,4 +1,4 @@
-import { ContentfulApi } from '../../Contentful/ContentfulApi';
+import { ContentfulAPI } from '../../Contentful/ContentfulAPI';
 import { ContentfulElementValidator as Element } from '../../Contentful/ContentfulElementValidator';
 
 describe('Testing the Current Message on the Homepage:', function () {
@@ -6,7 +6,7 @@ describe('Testing the Current Message on the Homepage:', function () {
   let currentSeries;
   let messageURL;
   before(function () {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     const messageList = content.retrieveMessageList(1);
     const seriesManager = content.retrieveSeriesManager();
 

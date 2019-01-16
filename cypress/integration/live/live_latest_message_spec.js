@@ -1,4 +1,4 @@
-import { ContentfulApi } from '../../Contentful/ContentfulApi';
+import { ContentfulAPI } from '../../Contentful/ContentfulAPI';
 import { ContentfulElementValidator as Element } from '../../Contentful/ContentfulElementValidator';
 
 function check_message_card_content(index, message){
@@ -22,7 +22,7 @@ function check_message_card_content(index, message){
 describe('Testing the Past Weekends section on the Live page:', function () {
   let messageList;
   before(function () {
-    const content = new ContentfulApi();
+    const content = new ContentfulAPI();
     messageList = content.retrieveMessageList(5);
 
     cy.wrap({messageList}).its('messageList.currentMessage').should('not.be.undefined').then(() => {
