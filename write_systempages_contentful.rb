@@ -2,7 +2,7 @@ require 'json'
 require 'contentful/management'
 
 client = Contentful::Management::Client.new(ENV['CONTENTFUL_MANAGEMENT_TOKEN'])
-environment = client.environments('y3a9myzsdjan').find('int')
+environment = client.environments('y3a9myzsdjan').find('int') #change to master to populate production with system pages
 systempages = environment.content_types.find('system_page')
 
 data = File.read("system-pages-old.json")
