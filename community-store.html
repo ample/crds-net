@@ -276,7 +276,16 @@ layout: default
         <p>
           We'd love to recommend something for you.
         </p>
-        <a class="btn btn-lg btn-secondary" href="#">Let's chat</a>
+        <a class="btn btn-lg btn-secondary" href="#" data-click-chat>Let's chat</a>
     </div>
   
   </div>
+  
+<script>
+  $(document).ready(function(){
+    $('a[data-click-chat]').click(function(e){
+      e.preventDefault();
+      FrontChat('show');
+    })
+  });
+</script>
