@@ -67,6 +67,7 @@
 
   .carousel-container {
     margin: 30px auto 0px auto;
+
     .card-text a {
       color: $cr-cyan;
     }
@@ -105,6 +106,8 @@
       margin-bottom: 0px;
     }
   }
+
+  .row { margin: 0 }
 
   .group-cells {
     .container {
@@ -179,8 +182,9 @@
   }
 
   .card-container {
+    overflow: hidden;
     .carousel {
-      left: 30px;
+      left: 15px;
     }
   }
 }
