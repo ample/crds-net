@@ -67,6 +67,7 @@
 
   .carousel-container {
     margin: 30px auto 0px auto;
+
     .card-text a {
       color: $cr-cyan;
     }
@@ -106,6 +107,8 @@
     }
   }
 
+  .row { margin: 0 }
+
   .group-cells {
     .container {
       margin-bottom: 44px;
@@ -141,6 +144,7 @@
 }
 
 #trips-container {
+
   width: 100%;
   margin-bottom: 0px;
   background-color: $cr-gold-light;
@@ -178,8 +182,9 @@
   }
 
   .card-container {
+    overflow: hidden;
     .carousel {
-      left: 30px;
+      left: 15px;
     }
   }
 }
